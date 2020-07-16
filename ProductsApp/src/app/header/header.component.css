@@ -1,0 +1,18 @@
+.card-header{
+    background-color: dodgerblue;
+}
+a{
+    padding:10px;
+    color:yellow;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: wheat;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 4px;
+    font-size: 100px;
+    background-color: royalblue;
+}
