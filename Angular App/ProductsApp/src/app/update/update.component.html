@@ -1,0 +1,49 @@
+<div class="card">
+    <form (ngSubmit)="editProduct()">
+        <div class="card-header">{{title}}</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><label>Product Id</label></td>
+                            <td><input type="text"name="p_id" [(ngModel)]=" edit.productId"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Name</label></td>
+                            <td><input type="text"name="p_name" [(ngModel)]="edit.productName"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Code</label></td>
+                            <td><input type="text"name="p_code" [(ngModel)]=" edit.productCode"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Date</label></td>
+                            <td><input type="text"name="p_date" [(ngModel)]=" edit.releaseDate"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Description</label></td>
+                            <td><input type="text"name="p_desc" [(ngModel)]=" edit.description"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Price</label></td>
+                            <td><input type="text"name="p_price" [(ngModel)]=" edit.price"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product starRating</label></td>
+                            <td><input type="text"name="p_rating" [(ngModel)]=" edit.starRating"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product ImageUrl</label></td>
+                            <td><input type="text"name="p_image" [(ngModel)]=" edit.imageUrl"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit"class="submit" value="Submit"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

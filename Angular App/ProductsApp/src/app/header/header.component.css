@@ -1,0 +1,31 @@
+.card-header{
+    background-color: dodgerblue;
+}
+a{
+    padding:10px;
+    color:yellow;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+     color: wheat; 
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 4px;
+    font-size: 100px;
+    height: 50%;
+    background: linear-gradient(132deg, #c7039c, #1665c1);
+        background-size: 400% 400%;
+        animation: BackgroundGradient 30s ease infinite;
+
+}
+    @keyframes BackgroundGradient {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+    .submit{
+        background-color:dodgerblue ;
+        color:white;
+    } 
