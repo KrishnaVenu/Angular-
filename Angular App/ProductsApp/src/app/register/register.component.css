@@ -1,14 +1,6 @@
-/* body{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(228, 84, 127) 0%, rgb(13, 91, 107) 96%);;
+.container{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(228, 84, 127) 0%, rgb(13, 91, 107) 96%);
   }
-  
-  
-  
-  
-  
-  
-  
-  
   
   h1{
     padding: 26px;
@@ -28,4 +20,4 @@
     max-width: 400px;
   color: thistle;
   }
-   */
+  
