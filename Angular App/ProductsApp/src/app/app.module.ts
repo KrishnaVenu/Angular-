@@ -1,46 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { Routes, RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
-import { NewproductComponent } from './newproduct/newproduct.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { FooterComponent } from './footer/footer.component';
-import { UpdateComponent } from './update/update.component';
-import { ProductService} from './product.service';
-import {UsersService} from './users.service';
-import {ProductGuard} from './product.guard';
-import {TokenInterceptorService} from './token-interceptor.service';
+import {NewproductComponent} from './newproduct/newproduct.component';
+import { UpdateComponent} from './update/update.component';
+import {LoginComponent} from './login/login.component';
+import {RegisterComponent} from './register/register.component';
+import{ProductGuard} from './product.guard';
+
+const routes: Routes = [
+                        // {path:'',redirectTo:'/product',pathMatch:'full'},
+                        {path:'product',component:ProductListComponent,canActivate: [ProductGuard]},
+                         {path:'add',component:NewproductComponent,canActivate: [ProductGuard]},
+                        {path:'update',component: UpdateComponent},
+                        {path:'login',component:LoginComponent},
+                        {path:'register',component:RegisterComponent}
+                        
+                      ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ProductListComponent,
-    NewproductComponent,
-    RegisterComponent,
-    LoginComponent,
-    FooterComponent,
-    UpdateComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-   providers: [ ProductService,UsersService, ProductGuard,
-   {
-    provide: HTTP_INTERCEPTORS,
-    useClass: TokenInterceptorService,
-    multi: true
-   }
-],
-  bootstrap: [AppComponent]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppModule { }
+export class AppRoutingModule { }
