@@ -8,17 +8,17 @@ import {Router} from '@angular/router';
   templateUrl: './newproduct.component.html',
   styleUrls: ['./newproduct.component.css']
 })
-export class NewproductComponent implements OnInit {
-title:String = 'Add Product';
-  constructor(private productService: ProductService,private router: Router) { }
-productItem = new ProductModel(null,null,null,null,null,null,null,null);
+ export class NewproductComponent implements OnInit {
+ title:String = 'Add Product';
+   constructor(private productService: ProductService,private router: Router) { }
+ productItem = new ProductModel(null,null,null,null,null,null,null,null);
   ngOnInit(): void {
-  }
+   }
 AddProduct()
 {
   this.productService.newProduct(this.productItem);
   console.log('Called');
   alert('Success');
-  this.router.navigate(['/']);
+  this.router.navigate(['/products']);
 }
-}
+ }
