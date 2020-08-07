@@ -17,7 +17,5 @@ app.use('/p',productRouter);
 app.get('/',(req,res)=>{
       res.send('The server is running');
 })
-
-/
   
 app.listen(3000,()=>console.log('listening to port 3000'));
